@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="header">
+  <van-row>
+    <van-col span="8" offset="8">
+        <view class="avatar-border">
+            <image class="avatar" src="{{imgSrc}}"></image>
+        </view>
+    </van-col>
+  </van-row>
+  <van-row>
+    <van-col span="8">
+      <view class="box box-one">
+        <text class="block box-number">24</text>
+        <text class="box-text">年龄</text>
+      </view>
+    </van-col>
+    <van-col span="8">
+      <view class="box box-two">
+          <text class="block box-number">200天</text>
+          <text class="box-text">坚持早睡</text>
+      </view>
+    </van-col>
+    <van-col span="8">
+      <view class="box box-three">
+          <text class="block box-number">30天</text>
+          <text class="box-text">打卡</text>
+      </view>
+    </van-col>
+  </van-row>
+</view>
+<view class="body">
+  <view class="item item-sleep">
+    <text class="block item-title">早睡打卡</text>
+    <van-tag class = "block" mark type="primary">约会后被送回家的时候</van-tag>
+  </view>
+  <view class="item item-camera">
+      <text class="block item-title">拍照记录</text>
+      <van-tag class = "block" mark type="primary">我不会说“明天再见”</van-tag>
+  </view>
+  <view class="item item-book">
+        <text class="block item-title">修复教程</text>
+      <van-tag class = "block" mark type="primary">因为一个人太孤独</van-tag>
+  </view>
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="shop">首页</van-tabbar-item>
+  <van-tabbar-item icon="chat" >个人</van-tabbar-item>
+</van-tabbar>

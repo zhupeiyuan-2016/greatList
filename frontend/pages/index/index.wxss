@@ -1,0 +1,69 @@
+
+.header{
+  padding: 8px;
+  background-color:#7266ba;
+}
+.avatar-border{
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.1);
+}
+.avatar{
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.box{
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+.box-one,.box-two{
+  border-right: 1px solid white;
+}
+.block{
+  display: block;
+}
+.body{
+  margin-top: 20px;
+}
+.flog-left{
+  float: left;
+}
+.flog-right{
+  float:right;
+}
+.item{
+  margin: 10px;
+  height: 180rpx;
+  box-shadow: 2px 1px 2px;
+  border-radius: 10%;
+}
+.item-book{
+  background-color: #12CBC4;
+  background-image: url('http://ouvyoji2r.bkt.clouddn.com/2018/10/1171010435.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70px 50px;
+}
+.item-sleep{
+  background-color: #ED4C67;
+  background-image: url('http://ouvyoji2r.bkt.clouddn.com/2018/10/2737003867.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 60px 50px;
+}
+.item-camera{
+  background-color: #FFC312;
+  background-image: url('http://ouvyoji2r.bkt.clouddn.com/2018/10/1136194528.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px 60px;
+}
+.item-title{
+  font-size: 55rpx;
+  padding:10px;
+}
