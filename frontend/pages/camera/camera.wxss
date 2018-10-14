@@ -1,0 +1,40 @@
+/* pages/camera/camera.wxss */
+.tabbar{
+  height: 55px;
+  background-color: #7266ba;
+  text-align: center;
+  color: black;
+  font-size: 28rpx;
+}
+.tabbar-1{
+  height: 40px;
+  background-image: url('http://ouvyoji2r.bkt.clouddn.com/2018/10/743120605.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tabbar-2{
+  height: 40px;
+  background-image: url('http://ouvyoji2r.bkt.clouddn.com/2018/10/1064218102.png');
+  background-size: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tabbar-text{
+  display: block;
+  height: 40px;
+  line-height: 90px;
+}
+.avatar{
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.avatar-border{
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.1);
+}

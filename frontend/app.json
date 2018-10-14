@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/camera/camera"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,13 +11,16 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "selectedColor":"#7266ba",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/person/person",
-      "text": "个人"
-    }]
+    "selectedColor": "#7266ba",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人"
+      }
+    ]
   }
 }

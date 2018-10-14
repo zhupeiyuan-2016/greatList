@@ -9,17 +9,19 @@ Page({
     itemSrc:'http://ouvyoji2r.bkt.clouddn.com/2018/10/3245483770.png',
     itemGo:'http://ouvyoji2r.bkt.clouddn.com/2018/10/459207981.png'
   },
+  sleep:function(){
+    wx.showModal({
+      title: '打卡',
+      content: '请在规定时间打卡'
+    })
+  },
+  camera:function(){
+    console.log("camera")
+    wx.navigateTo({
+      url: '../camera/camera',
+    })
+  },
   onLoad: function () {
     
   },
-  onChange:function(event){
-    console.log(event.detail)
-    if(event.detail == 1){
-      wx.navigateTo({
-        url: '../person/person'
-      })
-    }
-  }
-  
- 
 })

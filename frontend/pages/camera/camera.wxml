@@ -1,0 +1,20 @@
+<!--pages/camera/camera.wxml-->
+<view class="tabbar">
+<van-row >
+      <van-col span="8">
+          <view class="tabbar-1">
+            <text class="tabbar-text">主页</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+            <view class="avatar-border">
+                <image class="avatar" src="{{imgSrc}}"></image>
+            </view>
+        </van-col>
+        <van-col span="8">
+            <view class="tabbar-2">
+                <text class="tabbar-text">徽章</text>
+            </view>
+        </van-col>
+</van-row>
+</view>

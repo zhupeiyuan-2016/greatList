@@ -29,15 +29,15 @@
   </van-row>
 </view>
 <view class="body">
-  <view class="item item-sleep">
+  <view class="item item-sleep" bindtap="sleep">
     <text class="block item-title">早睡打卡</text>
     <van-tag class = "block" mark type="primary">约会后被送回家的时候</van-tag>
   </view>
-  <view class="item item-camera">
+  <view class="item item-camera" bindtap="camera">
       <text class="block item-title">拍照记录</text>
       <van-tag class = "block" mark type="primary">我不会说“明天再见”</van-tag>
   </view>
-  <view class="item item-book">
+  <view class="item item-book" bindtap ="book">
         <text class="block item-title">修复教程</text>
       <van-tag class = "block" mark type="primary">因为一个人太孤独</van-tag>
   </view>
