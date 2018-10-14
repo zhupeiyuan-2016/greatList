@@ -42,8 +42,3 @@
       <van-tag class = "block" mark type="primary">因为一个人太孤独</van-tag>
   </view>
 </view>
-
-<van-tabbar active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item icon="shop">首页</van-tabbar-item>
-  <van-tabbar-item icon="chat" >个人</van-tabbar-item>
-</van-tabbar>

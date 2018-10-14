@@ -12,5 +12,14 @@ Page({
   onLoad: function () {
     
   },
+  onChange:function(event){
+    console.log(event.detail)
+    if(event.detail == 1){
+      wx.navigateTo({
+        url: '../person/person'
+      })
+    }
+  }
+  
  
 })

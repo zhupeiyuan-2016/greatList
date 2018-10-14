@@ -40,7 +40,7 @@
   margin: 10px;
   height: 180rpx;
   box-shadow: 2px 1px 2px;
-  border-radius: 10%;
+  border-radius: 8px;
 }
 .item-book{
   background-color: #12CBC4;
