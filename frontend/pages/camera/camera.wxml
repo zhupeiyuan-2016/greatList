@@ -18,3 +18,31 @@
         </van-col>
 </van-row>
 </view>
+<view class="body">
+   <view class="month">
+        <text class="month-title">{{month}}月</text>
+        <view class="days">
+            <view class="month-item" wx:for ="{{data}}">
+                <view class="month-text">
+                    {{item.text}}
+                </view>
+                <view class="month-number">
+                    {{item.number}}
+                </view>
+            </view>
+        </view>
+   </view>
+    <!-- <view class="things" wx:for="{{things}}">
+        <view class="thing-date">{{item.date}}</view>
+        <view class="thing-content">
+            <image class="thing-img" wx:for="{{item.content}}" src="{{item}}"></image>
+        </view>
+    </view> -->
+    
+    <van-row wx:for= "things">
+        <van-col span="3">{{item.date}}</van-col>
+        <!-- <van-col span="7" wx:for="{{item.content}}" >
+            <image src="{{item}}"></image>
+        </van-col> -->
+    </van-row>
+</view>

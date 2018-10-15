@@ -38,3 +38,51 @@
   border-radius: 50%;
   background-color: rgba(0,0,0,0.1);
 }
+.body{
+  height: 100vh;
+  margin-top:15px;
+  padding: 15px;
+  background-color: white;
+  font-size: 13px;
+}
+.days,.month{
+  overflow:hidden;
+}
+.month-title{
+  display: block;
+}
+.month-item{
+  float: left;
+  margin: 10px 3px;
+  width: 35px;
+  text-align: center;
+}
+.month-number{
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  border: 2px solid#d2dae2;
+  border-radius: 50%;
+}
+.things{
+  height: 80px;
+  margin: 10px;
+  overflow:hidden;
+}
+.things-content{
+  float: left;
+}
+.thing-date{
+  display: block;
+  float: left;
+  width: 30px;
+  font-size: 0.8rem;
+  text-align: center;
+  border-left:2px solid #7266ba; 
+}
+.thing-img{
+  float: left;
+  width: 80px;
+  height: 50px;
+  margin: 8px;
+}
