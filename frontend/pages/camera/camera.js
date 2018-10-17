@@ -7,52 +7,105 @@ Page({
   data: {
     imgSrc: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
     month:10,
-    data:[
-      {
-        text:'TUE',
-        number:'09'
-      },
-      {
-        text:'WED',
-        number:'10'
-      },
-      {
-        text:'THU',
-        number:'11'
-      },
-      {
-        text:'FRI',
-        number:'12'
-      },
-      {
-        text:'SAT',
-        number:'13'
-      },
-      {
-        text:'SUN',
-        number:'14'
-      },
-      {
-        text:'MON',
-        number:'15'
-      }
-    ],
+    leftDisplay:true,
+    rightDisplay:false,
     things:[
       {
-        date:'09',
+        id:'1',
+        text:'MON',
+        number:'09',
+        content:['http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png','http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png','http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png']
+      },
+      {
+        id:'2',
+        text:'MON',
+        number:'10',
         content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
       },
       {
-        date:'10',
+        id:'3',
+        text:'MON',
+        number:'09',
+        content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
+      },
+      {
+        id:'4',
+        text:'MON',
+        number:'10',
+        content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
+      }, 
+      {
+        id:'5',
+        text:'MON',
+        number:'09',
+        content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
+      },
+      {
+        id:'6',
+        text:'MON',
+        number:'10',
         content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
       }
-    ]
+    ],
+    nextData:[
+      {
+        id:'1',
+        text:'MON',
+        number:'09',
+        content:['http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png','http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png','http://ouvyoji2r.bkt.clouddn.com/2018/10/3073266771.png']
+      },
+      {
+        id:'2',
+        text:'MON',
+        number:'10',
+        content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
+      }
+    ],
+    lastData:[]
   },
-  onChange(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.index + 1}`,
-      icon: 'none'
-    });
+  //回到主页
+  goIndex:function(){
+    console.log('回到主页')
+    wx.switchTab({
+      url: '../index/index'
+    })
+  },
+  updata:function(){
+    wx.chooseImage({
+      success: function(res) {
+        console.log(res)
+      },
+    })
+  },
+  //打开
+  openImg:function(event){
+    let imgId = event.currentTarget.dataset.id;
+    let data = this.data.things;
+    let resutl = [];
+    for(let i = 0 ;i < data.length ; i++){
+      if(data[i].id == imgId){
+        resutl = data[i].content;
+        break;
+      }
+    }
+    wx.previewImage({
+      urls: resutl,
+    })
+  },
+  //切换
+  slider:function(event){
+    let flag = event.currentTarget.dataset.flag;
+    console.log(flag)
+    let _this = this;
+    if(flag == 'left'){
+      let temp = this.data.things;
+      console.log(temp)
+      this.setData({
+        things:_this.data.nextData,
+        lastData:temp
+      })
+    }
+    console.log(this.data.lastData)
   },
   /**
    * 生命周期函数--监听页面加载

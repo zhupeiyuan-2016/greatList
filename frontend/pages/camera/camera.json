@@ -2,6 +2,8 @@
   "usingComponents": {
     "van-row": "/miniprogram_npm/vant-weapp/row/index",
     "van-col": "/miniprogram_npm/vant-weapp/col/index",
-    "van-steps": "/miniprogram_npm/vant-weapp/steps/index"
+    "van-steps": "/miniprogram_npm/vant-weapp/steps/index",
+    "van-transition": "/miniprogram_npm/vant-weapp/transition/index",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index"
   }
 }
