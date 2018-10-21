@@ -36,10 +36,10 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: '',
-    prefix: 'think_',
+    database: 'greatList',
+    prefix: '',
     encoding: 'utf8',
-    host: '127.0.0.1',
+    host: 'localhost',
     port: '',
     user: 'root',
     password: 'root',
