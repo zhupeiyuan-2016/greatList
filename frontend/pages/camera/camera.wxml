@@ -41,20 +41,12 @@
     </van-row>
 </view>
 <view class="go" bindtap="updata"></view>
-<view class="up-img">
+<view class="up-img" wx:if="{{upDisplay}}">
     <view class="up-header">
-        <text>上传图片</text>
+        <text class="up-title">上传图片</text>
     </view>
-    <van-row >
-        <van-vol span="7">
-            <image class="imgItem" src ="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-        </van-vol>
-        <van-vol span="7">
-            <image class="imgItem" src ="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-        </van-vol>
-        <van-vol span="7">
-            <image class="imgItem" src ="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-        </van-vol>
-    </van-row>
-    <van-button plain type="primary" class="up">朴素按钮</van-button>
+    <view class="img-box"  >
+        <image class="imgItem" wx:for="{{updataList}}" src="{{item}}" ></image>
+    </view>
+    <van-button class="up" plain type="primary" >提交</van-button>
 </view>

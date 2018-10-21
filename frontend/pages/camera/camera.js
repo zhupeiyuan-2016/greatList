@@ -9,6 +9,7 @@ Page({
     month:10,
     leftDisplay:true,
     rightDisplay:false,
+    upDisplay:false,
     things:[
       {
         id:'1',
@@ -61,7 +62,8 @@ Page({
         content:['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg','http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg']
       }
     ],
-    lastData:[]
+    lastData:[],
+    updataList:[]
   },
   //回到主页
   goIndex:function(){
@@ -71,11 +73,18 @@ Page({
     })
   },
   updata:function(){
+    const _this = this;
     wx.chooseImage({
+      count:3,
       success: function(res) {
-        console.log(res)
+        const tempFilePaths = res.tempFilePaths;
+        _this.setData({
+          updataList:tempFilePaths,
+          upDisplay:true
+        })
       },
-    })
+    });
+
   },
   //打开
   openImg:function(event){

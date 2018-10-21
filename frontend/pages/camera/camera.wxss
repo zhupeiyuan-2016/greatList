@@ -99,7 +99,6 @@
 .up-img{
   position: fixed;
   right: 10%;
-  left: 10%;
   top: 23%;
   background-color: white;
   box-shadow: 2px 1px 2px;
@@ -107,14 +106,21 @@
   text-align: center;
 }
 .up-header{
+  height: 90rpx;
   background-color: rgb(108, 92, 231);
 }
-.imgItem{
-  width: 80px;
-  height:80px;
-  margin: 8px;
-  border-radius: 8px;
+.up-title{
+  height: 80rpx;
+  line-height: 95rpx;
 }
-.up{
-  margin: 10px;
+.img-box{
+  overflow:hidden;
+  zoom: 1;
+}
+.imgItem{
+  width: 180rpx;
+  height:180rpx;
+  margin: 10rpx;
+  border-radius: 8px;
+  float: left;
 }
