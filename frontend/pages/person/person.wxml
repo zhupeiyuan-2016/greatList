@@ -6,6 +6,10 @@
       </view>
   </van-cell>
   <van-cell title="昵称" value="jiumi"  />
-  <van-cell title="性别" value="男"/>
+  <van-cell title="性别" >
+    <view>
+      <open-data type = "userGender"></open-data>
+    </view>
+  </van-cell>
   <van-cell title="年龄" value="20" border="{{ false }}" />
 </van-cell-group>

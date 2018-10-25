@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+var localost = getApp().globalData.localost;
 const app = getApp()
 
 Page({
@@ -21,7 +22,26 @@ Page({
       url: '../camera/camera',
     })
   },
-  onLoad: function () {
-    
+  getUserInfo:function(){
+    console.log('获取年龄，坚持早睡信息，打卡信息');
+    wx.login({
+      success:function(e){
+        if(e.code){
+          wx.request({
+            url: localost + '/login',
+            method:'post',
+            data:{
+              code: e.code
+            },
+            success:function(e){
+              console.log(e.data)
+            }
+          })
+        }
+      }
+    })
   },
+  onLoad: function () {
+   this.getUserInfo();
+  }
 })
